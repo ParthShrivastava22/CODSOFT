@@ -5,6 +5,10 @@ body {
   color: lightgray;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -686,6 +690,67 @@ footer h1 {
 .autoBlur {
   animation: autoBlurAnimation linear both;
   animation-timeline: view();
+}
+
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+
+  35%,
+  65% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+/*AUTO DISPLAY ANIMATION*/
+.autoDisplay {
+  animation: autoDisplayAnimation both;
+  animation-timeline: view();
+}
+
+@keyframes autoDisplayAnimation {
+  0% {
+    filter: blur(10px);
+    transform: translateY(-200px) scale(0);
+    opacity: 0.2;
+  }
+
+  50% {
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* FADEIN LEFT ANIMATION */
+
+.fadein-left {
+  animation: fadeInLeftAnimation both;
+  animation-timeline: view();
+}
+
+@keyframes fadeInLeftAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px) scale(0.2);
+    filter: blur(10px);
+  }
+  35%,
+  65% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(10px);
+  }
 }
 
 @keyframes hover-animation {
