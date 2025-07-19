@@ -1188,3 +1188,122 @@ footer h1 {
     gap: 10px;
   }
 }
+
+/* Resume Section */
+.resume-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.resume-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+}
+
+.resume-download,
+.resume-preview {
+  flex: 1;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #080020b7;
+  border: 1px solid #727fde8f;
+  box-shadow: 0 0 15px #727fde65;
+}
+
+.resume-download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.resume-download i {
+  font-size: 80px;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.resume-preview-content {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.resume-item {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #727fde4d;
+}
+
+.resume-item:last-child {
+  border-bottom: none;
+}
+
+/* Scrollbar styling */
+.resume-preview-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.resume-preview-content::-webkit-scrollbar-track {
+  background: #080020;
+}
+
+.resume-preview-content::-webkit-scrollbar-thumb {
+  background: #727fde;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .resume-content {
+    flex-direction: column;
+  }
+}
+
+/* Add to style.css */
+.resume-download-btn {
+  color: white;
+  padding: 15px 35px;
+  border-radius: 10px;
+  border: 1px solid #72a1de81;
+  background-color: #2200493d;
+  box-shadow: 0 0 5px #72a1de81;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.resume-download-btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 15px #72a1de81;
+  transform: translateY(-3px);
+}
+
+/* Icon animation */
+.resume-download-btn i {
+  transition: transform 0.5s ease;
+}
+
+.resume-download-btn:hover i {
+  transform: translateY(5px);
+}
+
+.resume-download a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
